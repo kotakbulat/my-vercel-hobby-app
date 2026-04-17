@@ -1,21 +1,31 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
-import Home from "./pages/Home"
-import About from "./pages/About"
+import { Routes, Route } from "react-router-dom";
+import { routes } from "./router/routes";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <BrowserRouter>
-      <nav>
-        <Link to="/">Home</Link> |{" "}
-        <Link to="/about">About</Link>
-      </nav>
+    <div style={{ display: "flex" }}>
+      <Sidebar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </BrowserRouter>
-  )
+      <main
+        style={{
+          flex: 1,
+          padding: "2rem",
+          marginLeft: "60px", // space for toggle button
+        }}
+      >
+        <Routes>
+          {routes.map((route) => (
+            <Route
+              key={route.path}
+              path={route.path}
+              element={route.element}
+            />
+          ))}
+        </Routes>
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
