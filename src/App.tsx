@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { routes } from "./router/routes";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
   return (

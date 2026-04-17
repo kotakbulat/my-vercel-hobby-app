@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { routes } from "../router/routes";
+import { routes } from "../../router/routes";
 
 export default function Sidebar() {
   const [open, setOpen] = useState(false);
