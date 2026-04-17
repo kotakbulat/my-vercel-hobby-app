@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from '../assets/react.svg'
-import viteLogo from '../assets/vite-2.svg'
+import viteLogo2 from '../assets/vite-2.svg'
+import viteLogo from '../assets/vite.svg'
 import heroImg from '../assets/hero.png'
 import '../App.css'
 
@@ -13,7 +14,7 @@ function Test() {
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
           <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+          <img src={viteLogo2} className="vite" alt="Vite logo" />
         </div>
         <div>
           <h1>Get started</h1>
@@ -41,7 +42,7 @@ function Test() {
           <ul>
             <li>
               <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
+                <img className="button-icon" src={viteLogo2} alt="" />
                 Explore Vite
               </a>
             </li>
@@ -114,6 +115,29 @@ function Test() {
 
       <div className="ticks"></div>
       <section id="spacer"></section>
+
+      <div>
+        <div>
+          <a href="https://vite.dev" target="_blank">
+            <img src={viteLogo} className="logo" alt="Vite logo" />
+          </a>
+          <a href="https://react.dev" target="_blank">
+            <img src={reactLogo} className="logo react" alt="React logo" />
+          </a>
+        </div>
+        <h1>Vite + React</h1>
+        <div className="card">
+          <button onClick={() => setCount((count) => count + 1)}>
+            count is {count}
+          </button>
+          <p>
+            Edit <code>src/App.tsx</code> and save to test HMR
+          </p>
+        </div>
+        <p className="read-the-docs">
+          Click on the Vite and React logos to learn more
+        </p>
+      </div>
     </>
   )
 }

@@ -1,0 +1,95 @@
+
+/*------------GRID----------*/
+#hero {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    background-color: #00000000;
+}
+
+#hero-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#hero p,
+#hero h1,
+#hero button {
+    position: absolute;
+    left: 80px;
+    z-index: 1;
+    text-align: left;
+}
+
+#hero-top-note {
+    top: 120px;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+#hero h1 {
+    top: 160px;
+    font-size: 64px;
+    line-height: 1.1;
+    width: 600px;
+}
+
+#hero-desc {
+    top: 360px;
+    width: 500px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#hero button {
+    top: 460px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/*------------STYLE----------*/
+
+#hero {
+    color: #fff;
+}
+
+#hero::after {
+    background: rgba(20, 30, 60, 0);
+}
+
+#hero-top-note {
+    color: #dcdcdc;
+}
+
+#hero h1 {
+    font-weight: bold;
+}
+
+#hero-desc {
+    color: #e0e0e0;
+}
+
+#hero button {
+    background-color: #f2f2f2;
+    color: #000;
+}
+
+#hero button:hover {
+    background-color: #ddd;
+}
