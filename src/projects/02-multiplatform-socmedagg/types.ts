@@ -17,15 +17,14 @@ export interface VideoPost extends BasePost {
 export interface TextPost extends BasePost {
     type: 'text';
     platform: 'twitter';
-    videoId: string;
-    title: string;
+    content: string;
 }
 
 export interface ImagePost extends BasePost {
     type: 'image';
     platform: 'instagram';
-    videoId: string;
-    title: string;
+    imageId: string;
+    caption: string;
 }
 
 export type FeedPost = VideoPost | TextPost | ImagePost;
