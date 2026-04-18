@@ -4,14 +4,14 @@ import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
   return (
-    <div style={{ display: "flex" }}>
+    <div className="app-wrapper">
       <Sidebar />
 
       <main
         style={{
-          flex: 1,
           padding: "2rem",
-          marginLeft: "60px", // space for toggle button
+          paddingTop: "4rem",
+          minHeight: "100vh",
         }}
       >
         <Routes>
