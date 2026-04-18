@@ -16,6 +16,11 @@ export const routes: AppRoute[] = [
     name: "Home",
     element: <Home />,
   },
+  ...projectRegistry.map(project => ({
+    path: project.path,
+    name: project.title,
+    element: <project.component />,
+  })),
   {
     path: "/about",
     name: "About",
@@ -26,9 +31,4 @@ export const routes: AppRoute[] = [
     name: "Test",
     element: <Test />,
   },
-  ...projectRegistry.map(project => ({
-    path: project.path,
-    name: project.title,
-    element: <project.component />,
-  })),
 ];
