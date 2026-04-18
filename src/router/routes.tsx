@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { projectRegistry } from "../projects";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Test from "../pages/test";
@@ -25,4 +26,9 @@ export const routes: AppRoute[] = [
     name: "Test",
     element: <Test />,
   },
+  ...projectRegistry.map(project => ({
+    path: project.path,
+    name: project.title,
+    element: <project.component />,
+  })),
 ];
