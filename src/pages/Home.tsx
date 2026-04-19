@@ -17,7 +17,8 @@ function Home() {
 
                     <div id="hero-buttons">
                         <button className="project">Explore My Projects</button>
-                        <button className="github">Check my Github</button>
+                        <a href="https://github.com/kotakbulat" className="btn">Check my Github</a>
+                        <a href="https://kotakbulat.github.io" className="btn">My About</a>
                     </div>
                 </div>
             </div>
