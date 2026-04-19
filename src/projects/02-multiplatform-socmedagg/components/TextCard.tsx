@@ -6,10 +6,10 @@ interface TextCardProps {
 
 export default function TextCard({ post }: TextCardProps) {
   return (
-        <div className="p-4 pt-2">
-          <p className="text-gray-200 text-[15px] leading-relaxed">
-            {post.content}
-          </p>
-        </div>
+        <div className="content-padding pt-0">
+      <p className="text-content">
+        {post.content}
+      </p>
+    </div>
   );
 }

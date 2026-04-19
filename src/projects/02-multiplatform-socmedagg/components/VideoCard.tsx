@@ -1,4 +1,4 @@
-import type { VideoPost } from './types';
+import type { VideoPost } from '../types';
 
 interface VideoCardProps {
   post: VideoPost;
@@ -6,18 +6,19 @@ interface VideoCardProps {
 
 export default function VideoCard({ post }: VideoCardProps) {
   return (
-    <div className="flex flex-col">
-      <div className="aspect-video w-full bg-black">
+    <div>
+      {/* 9:16 aspect ratio wrapper for Shorts */}
+      <div className="shorts-wrapper">
         <iframe
-          className="w-full h-full"
-          src={`https://www.youtube.com/embed/${post.videoId}`}
+          className="shorts-iframe"
+          src={`https://www.youtube.com/embed/${post.videoId}?rel=0&modestbranding=1`}
           title={post.title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
       </div>
-      <div className="p-4 pt-3">
-        <p className="font-semibold text-gray-100">{post.title}</p>
+      <div className="content-padding">
+        <p className="content-title">{post.title}</p>
       </div>
     </div>
   );

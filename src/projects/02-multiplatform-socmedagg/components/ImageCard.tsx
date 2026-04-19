@@ -6,16 +6,16 @@ interface ImageCardProps {
 
 export default function ImageCard({ post }: ImageCardProps) {
   return (
-    <div className="flex flex-col">
+    <div>
       <img 
-        src={`https://picsum.photos/id/${post.imageId}/600/600`} 
+        src={`https://picsum.photos/id/${post.imageId}/600/800`} 
         alt="Post" 
-        className="w-full h-auto object-cover max-h-[600px]"
+        className="post-image"
         loading="lazy"
       />
-      <div className="p-4 pt-3">
-        <p className="text-sm text-gray-300">
-          <span className="font-semibold text-gray-100 mr-2">{post.author}</span>
+      <div className="content-padding">
+        <p className="post-caption">
+          <span className="caption-author">{post.author}</span>
           {post.caption}
         </p>
       </div>

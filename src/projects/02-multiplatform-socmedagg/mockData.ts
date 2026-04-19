@@ -2,15 +2,31 @@
 import type { RawPost, FeedPost } from "./types";
 
 const MOCK_YOUTUBE: RawPost[] = [
-  { platform: 'youtube', type: 'video', author: 'Fireship', videoId: 'B-ycCRtB-1M', title: 'React in 100 Seconds' },
-  { platform: 'youtube', type: 'video', author: 'Veritasium', videoId: 'dQw4w9WgXcQ', title: 'Never Gonna Give You Up' },
-  { platform: 'youtube', type: 'video', author: 'Marques Brownlee', videoId: 'tO1Ea-4B41A', title: 'Tech Review' }
+  // These use standard IDs, but we will force them into a Shorts 9:16 container via CSS
+  { platform: 'youtube', type: 'video', author: 'RedBull', videoId: 'evXfp7ORQL0', title: 'Flying to History' },
+  { platform: 'youtube', type: 'video', author: 'RedBull', videoId: 'kJ0tTj3KAXQ', title: 'Wait for the end... 🤯' },
+  { platform: 'youtube', type: 'video', author: 'RedBull', videoId: 'NqZrNODuh8k', title: 'My morning routine ☕️📱' }
 ];
 
 const MOCK_TWITTER: RawPost[] = [
-  { platform: 'twitter', type: 'text', author: 'Dan Abramov', content: 'Just realized you can build almost anything with useState and useEffect. What a time to be alive.' },
-  { platform: 'twitter', type: 'text', author: 'Elon Musk', content: 'Funding secured for the unified feed project. 🚀' },
-  { platform: 'twitter', type: 'text', author: 'Frontend Daily', content: 'Center a div? Just use flexbox. flex items-center justify-center. Done.' }
+  {
+    platform: 'twitter',
+    type: 'text',
+    author: 'Nomad Dev',
+    content: 'Working from a tiny café in Lisbon today. Good coffee, slow WiFi, perfect vibes.'
+  },
+  {
+    platform: 'twitter',
+    type: 'text',
+    author: 'Backpack Stories',
+    content: 'Missed my train in Kyoto, ended up discovering a hidden temple. Sometimes getting lost is the plan.'
+  },
+  {
+    platform: 'twitter',
+    type: 'text',
+    author: 'Wanderlog',
+    content: 'Pro tip: pack light. You don’t need 5 outfits, just 1 good story per day.'
+  }
 ];
 
 const MOCK_INSTAGRAM: RawPost[] = [
