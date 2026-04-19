@@ -2,6 +2,8 @@ import type { FeedPost, Platform } from '../types';
 import VideoCard from './VideoCard';
 import ImageCard from './ImageCard';
 import TextCard from './TextCard';
+import { Instagram, Youtube, Twitter } from "lucide-react";
+
 
 interface PlatformIconProps {
   platform: Platform;
@@ -10,11 +12,11 @@ interface PlatformIconProps {
 const PlatformIcon = ({ platform }: PlatformIconProps) => {
   switch (platform) {
     case 'youtube':
-      return <span className="platform-badge badge-yt">SHORTS</span>;
+      return <span className="platform-badge badge-yt"><Youtube /></span>;
     case 'twitter':
-      return <span className="platform-badge badge-tw">X</span>;
+      return <span className="platform-badge badge-tw"><Twitter /></span>;
     case 'instagram':
-      return <span className="platform-badge badge-ig">IG</span>;
+      return <span className="platform-badge badge-ig"><Instagram /></span>;
     default:
       return null;
   }

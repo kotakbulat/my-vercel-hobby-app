@@ -6,7 +6,7 @@ function App() {
     <div>
       <header className="app-header">
         <div className="header-content">
-          <h1 className="app-title">OmniFeed</h1>
+          <h1 className="app-title">Feeds</h1>
         </div>
       </header>
       

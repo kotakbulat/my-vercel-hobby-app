@@ -5,7 +5,9 @@ const MOCK_YOUTUBE: RawPost[] = [
   // These use standard IDs, but we will force them into a Shorts 9:16 container via CSS
   { platform: 'youtube', type: 'video', author: 'RedBull', videoId: 'evXfp7ORQL0', title: 'Flying to History' },
   { platform: 'youtube', type: 'video', author: 'RedBull', videoId: 'kJ0tTj3KAXQ', title: 'Wait for the end... 🤯' },
-  { platform: 'youtube', type: 'video', author: 'RedBull', videoId: 'NqZrNODuh8k', title: 'My morning routine ☕️📱' }
+  { platform: 'youtube', type: 'video', author: 'RedBull', videoId: 'NqZrNODuh8k', title: 'My morning routine ☕️📱' },
+  { platform: 'youtube', type: 'video', author: 'Airpaz Official', videoId: 'tG8EHO3MpH8', title: 'Be a Member, Get App-only Deal' },
+  { platform: 'youtube', type: 'video', author: 'Airpaz Official', videoId: 'T3H0Gt0EI-M', title: 'Be a Member, Get App-only Deal' },
 ];
 
 const MOCK_TWITTER: RawPost[] = [
@@ -26,6 +28,18 @@ const MOCK_TWITTER: RawPost[] = [
     type: 'text',
     author: 'Wanderlog',
     content: 'Pro tip: pack light. You don’t need 5 outfits, just 1 good story per day.'
+  },
+  {
+    platform: 'twitter',
+    type: 'text',
+    author: 'Airpaz',
+    content: '✈️ Ready for your next escape? Discover the best flight deals to your dream destinations—easy, fast, and affordable.'
+  },
+  {
+    platform: 'twitter',
+    type: 'text',
+    author: 'Airpaz',
+    content: '🌍 Travel smarter with exclusive promos on flights & hotels. Your next adventure starts here with seamless booking.'
   }
 ];
 
