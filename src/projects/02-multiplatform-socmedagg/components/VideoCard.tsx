@@ -15,7 +15,7 @@ export default function VideoCard({ post }: VideoCardProps) {
 
     const buildSrc = (autoplay: boolean) => {
       return `https://www.youtube.com/embed/${post.videoId}?` +
-        `rel=0&modestbranding=1&mute=1&playsinline=1` +
+        `rel=0&modestbranding=1&mute=0&playsinline=1` +
         (autoplay ? "&autoplay=1" : "");
     };
 
