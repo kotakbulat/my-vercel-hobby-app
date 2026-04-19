@@ -106,3 +106,12 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 14px; /* Even smaller font for tiny screens */
+  }
+  h1 {
+    font-size: 28px; /* Prevent long titles from breaking layout */
+  }
+}

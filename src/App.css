@@ -183,9 +183,6 @@
   }
 }
 
-
-
-
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -220,4 +217,19 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+@media (max-width: 480px) {
+  #center {
+    padding: 15px; /* Reduce padding to save space */
+  }
+  
+  .hero .base {
+    width: 120px; /* Shrink images/logos for small screens */
+  }
+  
+  #next-steps li {
+    flex: 1 1 100%; /* Make buttons full-width on mobile */
+  }
 }
