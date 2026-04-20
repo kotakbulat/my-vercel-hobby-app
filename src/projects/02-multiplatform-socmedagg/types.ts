@@ -1,6 +1,18 @@
 export type Platform = 'youtube' | 'twitter' | 'instagram';
 export type PostType = 'video' | 'text' | 'image';
 
+export interface TravelMeta {
+  departureAirport: string;
+  arrivalAirport: string;
+  departureDate: string;
+  returnDate?: string;
+  adult: number;
+  child: number;
+  infant: number;
+  cabin: "economy" | "business";
+  price?: number;
+}
+
 export interface BasePost {
     id: string;
     author: string;
