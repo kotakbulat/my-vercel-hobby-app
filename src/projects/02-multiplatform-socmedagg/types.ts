@@ -17,6 +17,7 @@ export interface BasePost {
     id: string;
     author: string;
     avatar: string;
+    travelMeta?: TravelMeta;
 }
 
 export interface VideoPost extends BasePost {
