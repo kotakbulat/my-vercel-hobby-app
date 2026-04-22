@@ -8,6 +8,17 @@ const MOCK_YOUTUBE: RawPost[] = [
   { platform: 'youtube', type: 'video', author: 'RedBull', videoId: 'NqZrNODuh8k', title: 'My morning routine ☕️📱' },
   { platform: 'youtube', type: 'video', author: 'Airpaz Official', videoId: 'tG8EHO3MpH8', title: 'Be a Member, Get App-only Deal' },
   { platform: 'youtube', type: 'video', author: 'Airpaz Official', videoId: 'T3H0Gt0EI-M', title: 'Be a Member, Get App-only Deal' },
+  { 
+    platform: 'youtube', type: 'video', author: 'Shubhi Najahi', videoId: 'puHbnVXKWkw', title: 'Bali to Jakarta on board TransNusa Airlines CGK - DPS',
+    travelMeta: {
+      departureAirport: "DPS",
+      arrivalAirport: "CGK",
+      departureDate: "2026-11-15",
+      returnDate: "2026-11-25",
+      adult: 1, child: 0, infant: 0,
+      cabin: "economy", price: 850
+    }
+  }
 ];
 
 const MOCK_TWITTER: RawPost[] = [
