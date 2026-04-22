@@ -3,6 +3,7 @@ import VideoCard from './VideoCard';
 import ImageCard from './ImageCard';
 import TextCard from './TextCard';
 import { Instagram, Youtube, Twitter } from "lucide-react";
+import FlightCTA from './FlightCTA';
 
 
 interface PlatformIconProps {
@@ -39,9 +40,14 @@ export default function PostCard({ post }: PostCardProps) {
       </div>
 
       {/* Dynamic Content */}
-      {post.type === 'video' && <VideoCard post={post} />}
-      {post.type === 'image' && <ImageCard post={post} />}
-      {post.type === 'text'  && <TextCard post={post} />}
+      <div className="media-container">
+        {post.type === 'video' && <VideoCard post={post} />}
+        {post.type === 'image' && <ImageCard post={post} />}
+        {post.type === 'text'  && <TextCard post={post} />}
+
+        {/* Intent Layer Overlay */}
+        {post.travelMeta && <FlightCTA meta={post.travelMeta} />}
+      </div>
 
       {/* Engagement Bar */}
       <div className="post-footer">
