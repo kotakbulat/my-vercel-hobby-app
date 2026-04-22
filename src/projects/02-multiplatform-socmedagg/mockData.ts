@@ -57,7 +57,18 @@ const MOCK_TWITTER: RawPost[] = [
 const MOCK_INSTAGRAM: RawPost[] = [
   { platform: 'instagram', type: 'image', author: 'NaturePhotography', imageId: '1018', caption: 'Beautiful sunset in the mountains. #nature #vibes' },
   { platform: 'instagram', type: 'image', author: 'FoodieLife', imageId: '429', caption: 'Best avocado toast I have ever had! 🥑✨' },
-  { platform: 'instagram', type: 'image', author: 'TravelGram', imageId: '1043', caption: 'Exploring the hidden gems of the city.' }
+  { platform: 'instagram', type: 'image', author: 'TravelGram', imageId: '1043', caption: 'Exploring the hidden gems of the city.' },
+  { 
+    platform: 'instagram', type: 'image', author: 'TravelGram', imageId: '1043', caption: 'Bali sunset vibes 🌅🌴',
+    travelMeta: {
+      departureAirport: "DMK",
+      arrivalAirport: "DPS",
+      departureDate: "2026-05-01",
+      returnDate: "2026-05-03",
+      adult: 1, child: 0, infant: 0,
+      cabin: "economy", price: 120
+    }
+  },
 ];
 
 export const fetchMockFeedBatch = async (): Promise<FeedPost[]> => {
