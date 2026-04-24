@@ -30,6 +30,17 @@ const MOCK_YOUTUBE: RawPost[] = [
       cabin: "economy", price: 850
     }
   },
+  { 
+    platform: 'youtube', type: 'video', author: 'pigallisme', videoId: 'V00YMzwduog', title: 'japan vs taiwan differences',
+    travelMeta: {
+      departureAirport: "CGK",
+      arrivalAirport: "TPE",
+      departureDate: "2026-09-05",
+      returnDate: "2026-09-14",
+      adult: 2, child: 0, infant: 0,
+      cabin: "economy", price: 850
+    }
+  }
 ];
 
 const MOCK_TWITTER: RawPost[] = [
