@@ -18,7 +18,18 @@ const MOCK_YOUTUBE: RawPost[] = [
       adult: 1, child: 0, infant: 0,
       cabin: "economy", price: 850
     }
-  }
+  },
+  { 
+    platform: 'youtube', type: 'video', author: 'GakNgantorDulu', videoId: 'NtUYC0FQ844', title: 'Budget ke Jepang 14 hari buat first timer 🇯🇵 #travel #japan',
+    travelMeta: {
+      departureAirport: "CGK",
+      arrivalAirport: "NRT",
+      departureDate: "2026-07-15",
+      returnDate: "2026-07-27",
+      adult: 2, child: 0, infant: 0,
+      cabin: "economy", price: 850
+    }
+  },
 ];
 
 const MOCK_TWITTER: RawPost[] = [
