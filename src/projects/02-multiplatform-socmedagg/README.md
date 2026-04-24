@@ -1,46 +1,46 @@
 ```markdown
-# 📱 OmniFeed PoC: Contextual Commerce in a Unified Feed
+# 📱 Feeds PoC: Contextual Commerce di dalam Feed Terpadu
 
-OmniFeed is a Proof of Concept (PoC) React application designed to validate two core product hypotheses:
+Feeds adalah aplikasi *Proof of Concept* (PoC) berbasis React yang dirancang untuk memvalidasi dua hipotesis produk utama:
 
-1. **The Engagement Hypothesis:** *"A unified, infinite-scrolling feed aggregating mixed content from multiple platforms (YouTube Shorts, Twitter/X, Instagram) feels useful and highly engaging."*
-2. **The Contextual Commerce Hypothesis:** *"Content drives intent. Contextual action overlays (like a flight booking CTA on a travel vlog) can convert user intent without breaking the native feed experience."*
+1. **Hipotesis Keterlibatan (*Engagement*):** *"Sebuah feed terpadu (unified feed) dengan infinite scroll yang menggabungkan berbagai konten dari banyak platform (YouTube Shorts, Twitter/X, Instagram) terasa sangat berguna dan sangat menarik (engaging)."*
+2. **Hipotesis Komersial Kontekstual (*Contextual Commerce*):** *"Konten dapat mendorong niat (intent). Overlay aksi kontekstual (seperti tombol CTA pemesanan tiket pesawat pada vlog liburan) dapat menghasilkan konversi tanpa merusak pengalaman scroll konten aslinya."*
 
-This is **not** a production-ready app. It relies on mock data, structural CSS, and simulated APIs to rapidly test the UX/UI feel of the idea.
+Aplikasi ini **bukan** untuk tahap *production*. Aplikasi ini menggunakan data *mock* (palsu), CSS, dan simulasi API untuk sekadar menguji pengalaman pengguna (UX/UI) secara cepat.
 
 ---
 
-## ✨ Features
+## ✨ Fitur Utama
 
-- **🔄 Unified Infinite Scroll**: Seamlessly mixes text, images, and 9:16 vertical video components into a single vertical feed using the native `IntersectionObserver` API.
-- **🎥 Platform Simulation**: 
-  - **YouTube**: Renders actual embedded YouTube iframes forced into a Shorts/Reels 9:16 aspect ratio.
-  - **Twitter/X**: Renders clean, readable text cards.
-  - **Instagram**: Renders high-quality images with author captions.
-- **✈️ Contextual Intent Layer**: A sleek, frosted-glass CTA overlay automatically appears on media tagged with travel metadata (e.g., Tokyo Vlogs, Bali photos).
-- **🔗 Dynamic Link Generation**: Clicking the CTA parses the underlying post's metadata and generates a live flight search query (via Airpaz).
+- **🔄 Unified Infinite Scroll**: Menggabungkan komponen teks, gambar, dan video vertikal 9:16 dengan mulus ke dalam satu *feed* (beranda) menggunakan API bawaan `IntersectionObserver`.
+- **🎥 Simulasi Platform**: 
+  - **YouTube**: Menampilkan *embed iframe* YouTube asli yang dipaksa ke rasio 9:16 bergaya Shorts/Reels.
+  - **Twitter/X**: Menampilkan kartu teks yang bersih dan mudah dibaca.
+  - **Instagram**: Menampilkan gambar dengan *caption* dari pembuat konten.
+- **✈️ Lapisan Niat Kontekstual (*Contextual Intent Layer*)**: Sebuah *overlay* CTA berdesain kaca buram (*frosted-glass*) yang elegan, otomatis muncul pada konten yang memiliki metadata *travel* (misal: Vlog Tokyo, foto liburan di Bali).
+- **🔗 Pembuatan Tautan Dinamis**: Mengklik tombol CTA akan memproses metadata dari postingan terkait dan menghasilkan tautan pencarian tiket pesawat secara aktual (melalui Airpaz).
 
 ---
 
 ## 🛠 Tech Stack
 
 - **Framework**: React 18 + Vite
-- **Language**: TypeScript (using Discriminated Unions for safe component rendering)
+- **Bahasa**: TypeScript (menggunakan *Discriminated Unions* untuk *rendering* komponen yang aman)
 - **Styling**: Native CSS (Modular, CSS variables, Flexbox)
 - **State Management**: React `useState`, `useEffect`, `useRef`
-- **Data**: Static mock JSON + simulated network delays
+- **Data**: Data JSON statis (*mock*) + simulasi jeda jaringan (*network delay*)
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Cara Menjalankan Project
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v16+ recommended)
+### Prasyarat (Prerequisites)
+- [Node.js](https://nodejs.org/) (direkomendasikan v16+)
 
-### Installation
+### Instalasi
 
-1. **Clone or Scaffold the Project**
-   If you haven't already created the Vite app, run:
+1. **Clone atau Buat Project**
+   Jika Anda belum membuat kerangka aplikasi menggunakan Vite, jalankan:
    ```bash
    npm create vite@latest omnifeed-poc -- --template react-ts
    cd omnifeed-poc
@@ -51,44 +51,44 @@ This is **not** a production-ready app. It relies on mock data, structural CSS, 
    npm install
    ```
 
-3. **Start the Development Server**
+3. **Jalankan Development Server**
    ```bash
    npm run dev
    ```
 
-4. **View the App**
-   Open your browser and navigate to `http://localhost:5173`
+4. **Lihat Aplikasi**
+   Buka browser Anda dan arahkan ke `http://localhost:5173`
 
 ---
 
-## 📁 Project Structure
+## 📁 Struktur Project
 
 ```text
 src/
 ├── components/
-│   ├── Feed.tsx          # Handles infinite scroll logic & state
-│   ├── PostCard.tsx      # Master wrapper that renders the right media type
-│   ├── VideoCard.tsx     # 9:16 YouTube Shorts Iframe wrapper
-│   ├── ImageCard.tsx     # Instagram-style image block
-│   ├── TextCard.tsx      # Twitter-style text block
-│   └── FlightCTA.tsx     # The contextual commerce overlay card
-├── mockData.ts           # Simulated API returning mixed feed batches
-├── types.ts              # TypeScript interfaces (Post types, TravelMeta)
-├── utils.ts              # Helper functions (Flight URL generator)
-├── styles.css            # Custom styling, animations, and variables
-├── App.tsx               # Main application wrapper and Header
-└── main.tsx              # React DOM entry point
+│   ├── Feed.tsx          # Menangani logika & state infinite scroll
+│   ├── PostCard.tsx      # Wrapper utama yang me-render jenis media yang tepat
+│   ├── VideoCard.tsx     # Wrapper iframe YouTube Shorts (Rasio 9:16)
+│   ├── ImageCard.tsx     # Blok gambar ala Instagram
+│   ├── TextCard.tsx      # Blok teks ala Twitter/X
+│   └── FlightCTA.tsx     # Kartu overlay untuk contextual commerce (Pesan Tiket)
+├── mockData.ts           # Simulasi API yang mengembalikan batch feed campuran
+├── types.ts              # Interface TypeScript (Tipe Post, TravelMeta)
+├── utils.ts              # Fungsi helper (Pembuat URL tiket penerbangan)
+├── styles.css            # Styling kustom, animasi, dan variabel CSS
+├── App.tsx               # Wrapper aplikasi utama dan Header
+└── main.tsx              # Entry point React DOM
 ```
 
 ---
 
-## 🧠 How it Works Under the Hood
+## 🧠 Cara Kerjanya di Balik Layar
 
 ### 1. Discriminated Unions (TypeScript)
-The app uses a robust TypeScript structure. A post has a `type: 'video' | 'image' | 'text'`. Based on this type, the TS compiler guarantees that `VideoCard` will receive a `videoId`, while `TextCard` will receive `content`.
+Aplikasi menggunakan struktur TypeScript yang kuat. Setiap *post* memiliki `type: 'video' | 'image' | 'text'`. Berdasarkan tipe ini, *compiler* TS menjamin bahwa `VideoCard` pasti menerima `videoId`, sedangkan `TextCard` pasti menerima `content`.
 
-### 2. The Contextual CTA
-Certain mock posts are injected with an optional `travelMeta` object:
+### 2. Contextual CTA (CTA Kontekstual)
+Beberapa postingan *mock* disuntikkan objek opsional bernama `travelMeta`:
 ```typescript
 travelMeta: {
   departureAirport: "LAX",
@@ -98,22 +98,22 @@ travelMeta: {
   price: 850
 }
 ```
-If `PostCard.tsx` detects this object, it mounts the `<FlightCTA />` component absolutely positioned over the media, creating a non-intrusive intent bridge.
+Jika `PostCard.tsx` mendeteksi adanya objek ini, komponen `<FlightCTA />` akan dimunculkan (di-*render*) dengan posisi absolut di atas media terkait, menciptakan "jembatan niat" (intent bridge) yang sama sekali tidak mengganggu konten.
 
-### 3. Endless Content Generation
-To simulate an infinite feed without needing a massive database, `mockData.ts` grabs a static pool of mock posts, shuffles them randomly, assigns them fresh UUIDs, and feeds them back to the UI whenever the user hits the bottom of the screen.
-
----
-
-## ⚠️ Limitations (Why this is a PoC)
-
-To move this to production, the following would need to be addressed:
-- **TOS & Scraping:** Currently uses YouTube embeds. A real app would need official API access (OAuth) or complex scraping infrastructure to bypass platform walled gardens safely.
-- **Backend:** Needs a real database (PostgreSQL/MongoDB) and a recommendation algorithm.
-- **Authentication:** No user login or session management exists.
-- **Performance:** Rendering dozens of YouTube iframes will eventually cause memory bloat. A production app would use thumbnail placeholders that only load the iframe/video on click or intersection.
+### 3. Pembuatan Konten Tanpa Batas (Endless Generation)
+Untuk menyimulasikan *feed* tanpa batas (infinite) tanpa membutuhkan *database* yang besar, file `mockData.ts` mengambil sekumpulan data *mock* statis yang tersedia, mengacak posisinya, memberikannya UUID baru yang unik, dan mengirimkannya kembali ke UI setiap kali pengguna men-*scroll* sampai ke bagian paling bawah layar.
 
 ---
 
-**Built to test ideas, fast. 🚀**
+## ⚠️ Keterbatasan (Mengapa ini disebut PoC)
+
+Untuk membawa aplikasi ini ke tahap *production*, beberapa hal berikut perlu diatasi:
+- **TOS & Scraping:** Saat ini aplikasi menggunakan YouTube *embed*. Aplikasi nyata akan membutuhkan akses API resmi (OAuth) atau infrastruktur *scraping* yang kompleks untuk mengambil video dengan aman tanpa melanggar kebijakan platform (Terms of Service).
+- **Backend:** Membutuhkan *database* sesungguhnya (seperti PostgreSQL/MongoDB) dan algoritma rekomendasi *feed*.
+- **Autentikasi:** Belum ada sistem *login* pengguna atau manajemen sesi.
+- **Performa:** Me-render puluhan *iframe* YouTube pada satu halaman secara perlahan akan menghabiskan memori (RAM). Aplikasi *production* harus menggunakan gambar *placeholder* (thumbnail) yang baru akan memuat video ketika diklik atau ketika videonya terlihat di layar (menggunakan lazy-loading/intersection observer).
+
+---
+
+**Dibuat untuk menguji ide, dengan cepat. 🚀**
 ```
