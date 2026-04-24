@@ -1,10 +1,17 @@
 ```markdown
 # 📱 Feeds PoC: Contextual Commerce di dalam Feed Terpadu
 
-Feeds adalah aplikasi *Proof of Concept* (PoC) berbasis React yang dirancang untuk memvalidasi dua hipotesis produk utama:
+Feeds adalah Proof of Concept (PoC) sederhana berbasis React yang dibuat untuk menguji apakah konten bisa jadi alat marketing yang efektif, bukan sekadar hiburan; dirancang untuk memvalidasi dua hipotesis produk utama:
 
-1. **Hipotesis Keterlibatan (*Engagement*):** *"Sebuah feed terpadu (unified feed) dengan infinite scroll yang menggabungkan berbagai konten dari banyak platform (YouTube Shorts, Twitter/X, Instagram) terasa sangat berguna dan sangat menarik (engaging)."*
-2. **Hipotesis Komersial Kontekstual (*Contextual Commerce*):** *"Konten dapat mendorong niat (intent). Overlay aksi kontekstual (seperti tombol CTA pemesanan tiket pesawat pada vlog liburan) dapat menghasilkan konversi tanpa merusak pengalaman scroll konten aslinya."*
+1. ***Engagement (Membangun Persepsi Positif #ValueOriented)*:** *Dalam industri travel, OTA dan airline seringkali lebih banyak mendapat review negatif (delay, reschedule, cancel) dibanding pengalaman positif yang jarang dibagikan.
+Dengan adanya feed konten, kita bisa “mengisi ruang” tersebut dengan cerita, pengalaman, dan highlight positif dari produk dan operasional kita.
+Ini membantu membentuk persepsi yang lebih baik di mata user, sekaligus bisa dimanfaatkan sebagai bahan untuk campaign atau paid ads.*
+2. **Contextual Commerce (Mendorong Konversi #CuanOriented):** *"Konten tidak hanya untuk dilihat, tapi juga bisa mendorong niat beli.
+Saat user melihat konten yang relevan (misalnya video liburan), kita bisa menyisipkan CTA yang natural (seperti pesan tiket).
+Dengan begitu, konten menjadi bagian dari funnel marketing yang bisa meningkatkan kemungkinan user untuk langsung melakukan transaksi.
+
+Selain itu, model ini juga bisa dikembangkan ke arah affiliate marketing, di mana content creator atau bahkan customer bisa ikut mempromosikan produk ke circle sosial atau komunitas mereka.
+Ini membuka peluang distribusi yang lebih luas dan organik, sekaligus mendorong lebih banyak transaksi melalui jaringan personal mereka."*
 
 Aplikasi ini **bukan** untuk tahap *production*. Aplikasi ini menggunakan data *mock* (palsu), CSS, dan simulasi API untuk sekadar menguji pengalaman pengguna (UX/UI) secara cepat.
 
