@@ -4,7 +4,7 @@ import { DashboardLayout } from './core/DashboardLayout';
 import { useDashboardStore } from './store/useDashboardStore';
 import { WidgetRegistry } from './core/WidgetRegistry';
 
-export const DashboardPlatform: React.FC = () => {
+const DashboardPlatform: React.FC = () => {
   const addWidget = useDashboardStore((state) => state.addWidget);
 
   return (
@@ -35,3 +35,5 @@ export const DashboardPlatform: React.FC = () => {
     </div>
   );
 };
+
+export default DashboardPlatform;

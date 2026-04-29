@@ -10,6 +10,7 @@ export interface Project {
 
 import Project01 from './01-counter-app/main';
 import Project02 from './02-multiplatform-socmedagg/App';
+import Project03 from './03-modular-dashboard/index';
 
 
 export const projectRegistry: Project[] = [
@@ -26,5 +27,12 @@ export const projectRegistry: Project[] = [
     path: '/projects/socmed-agg-app',
     component: Project02,
     description: 'simulate a unified social media feed by combining content from multiple platforms into a single scrolling'
+  },
+  {
+    id: 'modular-dashboard',
+    title: 'Modular Dashboard',
+    path: '/projects/modular-dashboard',
+    component: Project03,
+    description: 'A simple modular scalable dashboard platform'
   },
 ];
