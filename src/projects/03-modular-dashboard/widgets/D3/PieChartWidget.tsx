@@ -39,10 +39,10 @@ export const PieChartWidget: React.FC<{ dataSourceId?: string }> = ({ dataSource
       .attr("fill", d => color(d.data.label) as string)
       .attr("stroke", "white")
       .style("stroke-width", "2px")
-      .on("mouseover", function(event, d) {
+      .on("mouseover", function(_event, _d) {
         d3.select(this).transition().duration(200).attr("d", arcHover);
       })
-      .on("mouseout", function(event, d) {
+      .on("mouseout", function(_event, _d) {
         d3.select(this).transition().duration(200).attr("d", arc);
       });
 
