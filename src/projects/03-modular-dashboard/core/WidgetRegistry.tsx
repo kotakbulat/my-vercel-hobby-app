@@ -9,7 +9,7 @@ export const WidgetRegistry: Record<string, { title: string; component: React.FC
   notepad: { title: 'Notepad', component: NotepadWidget },
   clock: { title: 'Clock', component: ClockWidget },
   stopwatch: { title: 'Stopwatch', component: StopwatchWidget },
-  barchart: { title: 'Bar Chart', component: BarChartWidget },
-  linechart: { title: 'Line Chart', component: LineChartWidget },
-  piechart: { title: 'Pie Chart', component: PieChartWidget },
+  barchart: { title: 'Bar Chart (Mock)', component: BarChartWidget },
+  linechart: { title: 'Line Chart (D3 Live)', component: LineChartWidget },
+  piechart: { title: 'Pie Chart (D3 Live)', component: PieChartWidget },
 };
