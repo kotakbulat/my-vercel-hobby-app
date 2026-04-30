@@ -25,7 +25,9 @@ interface DashboardState {
 const defaultWidgets: WidgetItem[] = [
   { id: '1', type: 'linechart', layout: { x: 0, y: 0, w: 8, h: 4 }, dataSourceId: 'timeSeriesMock' },
   { id: '2', type: 'piechart', layout: { x: 8, y: 0, w: 4, h: 4 }, dataSourceId: 'userPosts' },
-  { id: '3', type: 'barchart', layout: { x: 0, y: 4, w: 6, h: 4 }, dataSourceId: 'userPosts' },
+  { id: '4', type: 'clock', layout: { x: 4, y: 4, w: 4, h: 4 } },
+  { id: '5', type: 'notepad', layout: { x: 0, y: 4, w: 4, h: 4 } },
+  { id: '6', type: 'stopwatch', layout: { x: 8, y: 4, w: 4, h: 4 } },
 ];
 
 export const useDashboardStore = create<DashboardState>()(
