@@ -4,12 +4,8 @@ import { WidgetContainer } from './WidgetContainer';
 import { LineChartWidget } from '../widgets/D3/LineChartWidget';
 import { PieChartWidget } from '../widgets/D3/PieChartWidget';
 import { BarChartWidget } from '../widgets/BarChart/BarChartWidget'; // Old one or D3 equivalent
+import { WidgetRegistry } from './WidgetRegistry';
 
-const WidgetRegistry: Record<string, React.FC<any>> = {
-  linechart: LineChartWidget,
-  piechart: PieChartWidget,
-  barchart: BarChartWidget,
-};
 
 export const DashboardLayout: React.FC = () => {
   const widgets = useDashboardStore((state) => state.widgets);
@@ -17,12 +13,25 @@ export const DashboardLayout: React.FC = () => {
   return (
     <div id="dashboard-grid-container" className="dashboard-grid">
       {widgets.map((w) => {
-        const Component = WidgetRegistry[w.type];
-        if (!Component) return null;
+        // Look up the widget by type
+        const WidgetMeta = WidgetRegistry[w.type];
+        
+        // If the widget type isn't found (e.g., old data), ignore it safely
+        if (!WidgetMeta) return null; 
+
+        const Component = WidgetMeta.component;
+
+        // Ensure layout has a fallback so it never crashes
+        const safeLayout = w.layout || { x: 0, y: 0, w: 4, h: 4 };
 
         return (
-          <WidgetContainer key={w.id} id={w.id} title={w.type.toUpperCase()} layout={w.layout}>
-            <Component dataSourceId={w.dataSourceId} config={w.config} />
+          <WidgetContainer 
+            key={w.id} 
+            id={w.id} 
+            title={WidgetMeta.title} 
+            layout={safeLayout}
+          >
+            <Component id={w.id} dataSourceId={w.dataSourceId} config={w.config} />
           </WidgetContainer>
         );
       })}
