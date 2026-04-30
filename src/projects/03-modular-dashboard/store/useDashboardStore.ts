@@ -1,45 +1,48 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
+export type WidgetLayout = { x: number; y: number; w: number; h: number };
+
 export type WidgetItem = {
   id: string;
   type: string;
+  layout: WidgetLayout;
+  dataSourceId?: string;
   config?: Record<string, any>;
 };
 
 interface DashboardState {
   widgets: WidgetItem[];
-  addWidget: (type: string) => void;
+  addWidget: (type: string, layout: WidgetLayout, dataSourceId?: string) => void;
+  updateLayout: (id: string, layout: Partial<WidgetLayout>) => void;
   removeWidget: (id: string) => void;
-  updateWidgetConfig: (id: string, config: Partial<Record<string, any>>) => void;
 }
 
 const defaultWidgets: WidgetItem[] =[
-  { id: '1', type: 'notepad', config: { title: 'My Notes' } },
-  { id: '2', type: 'clock', config: { is24h: false } },
-  { id: '3', type: 'stopwatch' },
-  { id: '4', type: 'barchart' },
+  { id: '1', type: 'linechart', layout: { x: 0, y: 0, w: 8, h: 4 }, dataSourceId: 'timeSeriesMock' },
+  { id: '2', type: 'piechart', layout: { x: 8, y: 0, w: 4, h: 4 }, dataSourceId: 'userPosts' },
+  { id: '3', type: 'barchart', layout: { x: 0, y: 4, w: 6, h: 4 }, dataSourceId: 'userPosts' },
 ];
 
 export const useDashboardStore = create<DashboardState>()(
   persist(
     (set) => ({
       widgets: defaultWidgets,
-      addWidget: (type) =>
+      addWidget: (type, layout, dataSourceId) =>
         set((state) => ({
-          widgets:[...state.widgets, { id: crypto.randomUUID(), type, config: {} }],
+          widgets:[...state.widgets, { id: crypto.randomUUID(), type, layout, dataSourceId, config: {} }],
+        })),
+      updateLayout: (id, newLayout) =>
+        set((state) => ({
+          widgets: state.widgets.map((w) =>
+            w.id === id ? { ...w, layout: { ...w.layout, ...newLayout } } : w
+          ),
         })),
       removeWidget: (id) =>
         set((state) => ({
           widgets: state.widgets.filter((w) => w.id !== id),
         })),
-      updateWidgetConfig: (id, newConfig) =>
-        set((state) => ({
-          widgets: state.widgets.map((w) =>
-            w.id === id ? { ...w, config: { ...w.config, ...newConfig } } : w
-          ),
-        })),
     }),
-    { name: 'dashboard-layout' }
+    { name: 'advanced-dashboard' }
   )
 );
