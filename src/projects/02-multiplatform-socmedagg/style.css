@@ -1,19 +1,19 @@
 /* src/styles.css */
 :root {
-  --bg-main: #030712;
-  --bg-card: #111827;
-  --border-color: #1f2937;
-  --text-main: #f3f4f6;
-  --text-muted: #9ca3af;
-  --accent-pink: #ec4899;
-  --accent-blue: #3b82f6;
-  --accent-green: #10b981;
+  --bg-main-pj2: #eaeaea;
+  --bg-card-pj2: #ffffff;
+  --border-color-pj2: #ff2c2c;
+  --text-main-pj2: #030303;
+  --text-muted-pj2: #313131;
+  --accent-pink-pj2: #ec4899;
+  --accent-blue-pj2: #3b82f6;
+  --accent-green-pj2: #10b981;
 }
 
-body {
+.multiplatform {
   margin: 0;
-  background-color: var(--bg-main);
-  color: var(--text-main);
+  background-color: var(--bg-main-pj2);
+  color: var(--text-main-pj2);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -23,9 +23,9 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: rgba(3, 7, 18, 0.85);
+  background-color: var(--bg-card-pj2);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color-pj2);
   padding: 1rem;
 }
 
@@ -40,7 +40,9 @@ body {
   font-weight: 700;
   background: linear-gradient(to right, #60a5fa, #a855f7, #ec4899);
   -webkit-background-clip: text;
-  color: transparent;
+  background-clip: text;
+  color: red;
+  background-color: var(--bg-main-pj2);
 }
 
 /* Feed Container */
@@ -52,12 +54,12 @@ body {
 
 /* Post Card */
 .post-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
+  background-color: var(--bg-card-pj2);
+  border: 1px solid var(--border-color-pj2);
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 1.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 15px -3px rgba(255, 0, 0, 0.5);
 }
 
 .post-header {
@@ -86,7 +88,7 @@ body {
   margin: 0;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--text-main);
+  color: var(--text-main-pj2);
 }
 
 /* Platform Badges */
@@ -128,6 +130,7 @@ body {
 .content-title {
   margin: 0;
   font-weight: 600;
+  color: var(--text-main-pj2);
 }
 
 /* Image Component */
@@ -142,19 +145,19 @@ body {
 .post-caption {
   margin: 0;
   font-size: 0.875rem;
-  color: #d1d5db;
+  color: var(--text-main-pj2);
 }
 
 .caption-author {
   font-weight: 600;
-  color: var(--text-main);
+  color: var(--text-main-pj2);
   margin-right: 0.5rem;
 }
 
 /* Text Component */
 .text-content {
   margin: 0;
-  color: #e5e7eb;
+  color: var(--text-main-pj2);
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -164,7 +167,7 @@ body {
   display: flex;
   gap: 1rem;
   padding: 0.5rem 1rem 1rem 1rem;
-  color: var(--text-muted);
+  color: var(--text-muted-pj2);
   font-size: 0.875rem;
 }
 
@@ -177,9 +180,9 @@ body {
   font-size: inherit;
   transition: color 0.2s;
 }
-.action-btn:hover:nth-child(1) { color: var(--accent-pink); }
-.action-btn:hover:nth-child(2) { color: var(--accent-blue); }
-.action-btn:hover:nth-child(3) { color: var(--accent-green); }
+.action-btn:hover:nth-child(1) { color: var(--accent-pink-pj2); }
+.action-btn:hover:nth-child(2) { color: var(--accent-blue-pj2); }
+.action-btn:hover:nth-child(3) { color: var(--accent-green-pj2); }
 
 /* Loader */
 .loader-container {
@@ -192,8 +195,8 @@ body {
 .spinner {
   width: 2rem;
   height: 2rem;
-  border: 4px solid var(--border-color);
-  border-top-color: var(--accent-blue);
+  border: 4px solid var(--border-color-pj2);
+  border-top-color: var(--accent-blue-pj2);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -213,10 +216,10 @@ body {
 /* If a text post has a CTA overlay, prevent the text from hiding under it */
 .text-content {
   margin: 0;
-  color: #e5e7eb;
   font-size: 0.95rem;
   line-height: 1.6;
   padding-bottom: 4rem; /* Extra padding just in case a CTA appears on text */
+  color: var(--text-main-pj2);
 }
 
 .flight-cta-overlay {

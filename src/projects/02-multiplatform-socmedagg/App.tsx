@@ -3,7 +3,7 @@ import './style.css'; // Make sure to import the CSS we created!
 
 function App() {
   return (
-    <div>
+    <div className="multiplatform">
       <header className="app-header">
         <div className="header-content">
           <h1 className="app-title">Feeds</h1>
