@@ -1,9 +1,6 @@
 import React from 'react';
 import { useDashboardStore } from '../store/useDashboardStore';
 import { WidgetContainer } from './WidgetContainer';
-import { LineChartWidget } from '../widgets/D3/LineChartWidget';
-import { PieChartWidget } from '../widgets/D3/PieChartWidget';
-import { BarChartWidget } from '../widgets/BarChart/BarChartWidget'; // Old one or D3 equivalent
 import { WidgetRegistry } from './WidgetRegistry';
 
 
