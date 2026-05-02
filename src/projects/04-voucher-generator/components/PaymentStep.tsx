@@ -43,7 +43,7 @@ export const PaymentStep: React.FC<Props> = ({ amount, onSuccess, isLocked }) =>
 
       {!isLocked && (
         <button className="gv-btn gv-primary gv-mt-3 gv-full-width" onClick={handlePay} disabled={loading}>
-          {loading ? <div className="gv-spinner"></div> : 'Pay Now'}
+          {loading ? <div className="gv-spinner"></div> : 'Pay Now (ini hanya Mock Payment)'}
         </button>
       )}
       {isLocked && <div className="gv-success-text gv-mt-3">✓ Payment Completed</div>}
