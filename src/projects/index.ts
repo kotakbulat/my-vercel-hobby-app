@@ -11,6 +11,7 @@ export interface Project {
 import Project01 from './01-counter-app/main';
 import Project02 from './02-multiplatform-socmedagg/App';
 import Project03 from './03-modular-dashboard/index';
+import Project04 from './04-voucher-generator/App';
 
 
 export const projectRegistry: Project[] = [
@@ -34,5 +35,12 @@ export const projectRegistry: Project[] = [
     path: '/projects/modular-dashboard',
     component: Project03,
     description: 'A simple modular scalable dashboard platform'
+  },
+  {
+    id: 'voucher-generator',
+    title: 'Mock Voucher Generator',
+    path: '/projects/voucher-generator',
+    component: Project04,
+    description: 'A simple rnadomized mock voucher generator'
   },
 ];
