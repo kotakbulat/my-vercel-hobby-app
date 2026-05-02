@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { toPng } from 'html-to-image';
 import { formatVoucherCode } from '../utils';
-import { VoucherCard, Theme } from './VoucherCard';
+import { VoucherCard } from './VoucherCard';
+import type { Theme } from './VoucherCard';
 
 interface Props {
   data: any;
