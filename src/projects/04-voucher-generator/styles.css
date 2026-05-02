@@ -1,0 +1,99 @@
+.gv-module-container {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111827;
+  background: #F9FAFB;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.gv-header { text-align: center; margin-bottom: 24px; }
+.gv-header h1 { margin: 0; font-size: 1.5rem; color: #111827; }
+.gv-header p { margin: 4px 0 0; color: #6B7280; font-size: 0.9rem; }
+
+.gv-flow-container { display: flex; flex-direction: column; gap: 16px; }
+
+.gv-card {
+  background: #FFFFFF;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  transition: all 0.3s ease;
+}
+
+.gv-locked { opacity: 0.6; pointer-events: none; filter: grayscale(20%); }
+.gv-fade-in { animation: gvFadeIn 0.4s ease-out; }
+
+.gv-title { font-size: 1.2rem; margin: 0 0 16px; color: #374151; }
+.gv-subtitle { font-size: 0.95rem; color: #4B5563; margin-bottom: 16px; }
+
+/* Selection Step */
+.gv-amount-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+.gv-amount-btn { padding: 12px; border: 2px solid #E5E7EB; background: white; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+.gv-amount-btn:hover { border-color: #9CA3AF; }
+.gv-amount-btn.gv-active { border-color: #4F46E5; background: #EEF2FF; color: #4F46E5; }
+
+.gv-custom-amount label { font-size: 0.9rem; font-weight: 600; }
+.gv-input-wrapper { display: flex; align-items: center; margin-top: 8px; border: 1px solid #E5E7EB; border-radius: 8px; overflow: hidden; }
+.gv-currency-prefix { padding: 12px; background: #F3F4F6; color: #6B7280; font-weight: bold; border-right: 1px solid #E5E7EB; }
+.gv-custom-input { flex: 1; padding: 12px; border: none; outline: none; font-size: 1rem; width: 100%; box-sizing: border-box; }
+
+/* Payment Step */
+.gv-payment-methods { display: flex; flex-direction: column; gap: 8px; }
+.gv-payment-option { display: flex; align-items: center; gap: 10px; padding: 14px; border: 1px solid #E5E7EB; border-radius: 8px; cursor: pointer; }
+
+/* Buttons & Utils */
+.gv-btn { padding: 12px 16px; border-radius: 8px; border: none; font-weight: 600; cursor: pointer; transition: 0.2s; display: inline-flex; justify-content: center; align-items: center; box-sizing: border-box; }
+.gv-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.gv-btn.gv-primary { background: #4F46E5; color: white; }
+.gv-btn.gv-primary:hover:not(:disabled) { background: #4338CA; }
+.gv-btn.gv-text-only { background: transparent; color: #4F46E5; }
+.gv-btn.gv-small { padding: 6px 10px; font-size: 0.8rem; background: #E5E7EB; color: #111827; }
+.gv-full-width { width: 100%; }
+.gv-mt-3 { margin-top: 16px; }
+
+.gv-success-text { color: #059669; font-weight: 600; text-align: center; }
+.gv-spinner { width: 20px; height: 20px; border: 3px solid rgba(255,255,255,0.3); border-top: 3px solid white; border-radius: 50%; animation: gvSpin 1s linear infinite; }
+
+/* Result Step */
+.gv-data-box { background: #F9FAFB; border: 1px dashed #D1D5DB; border-radius: 8px; padding: 16px; }
+.gv-data-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.gv-label { color: #6B7280; font-size: 0.9rem; }
+.gv-copy-group { display: flex; align-items: center; gap: 8px; }
+.gv-code-display { font-family: monospace; font-size: 1.1rem; font-weight: bold; }
+
+.gv-theme-selector { display: flex; gap: 8px; }
+.gv-theme-btn { padding: 8px 16px; border: 1px solid #E5E7EB; border-radius: 20px; background: white; cursor: pointer; }
+.gv-theme-btn.gv-active { background: #111827; color: white; border-color: #111827; }
+
+/* Export Card Details */
+.gv-card-preview { display: flex; justify-content: center; overflow: hidden; border: 1px solid #E5E7EB; border-radius: 12px; background: #f0f0f0; }
+.gv-voucher-wrapper { position: relative; width: 400px; height: 200px; background-color: #e5e7eb; overflow: hidden; }
+.gv-voucher-bg { width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: 1; }
+.gv-overlay { position: absolute; z-index: 2; color: white; text-shadow: 0 1px 4px rgba(0,0,0,0.6); }
+
+/* Card Theme Positioning overrides */
+.gv-v-amount { font-size: 2rem; font-weight: 800; top: 20px; right: 24px; }
+.gv-v-code { font-size: 1.4rem; font-family: monospace; font-weight: bold; letter-spacing: 2px; top: 85px; right: 24px; }
+.gv-v-footer { bottom: 20px; left: 24px; display: flex; flex-direction: column; gap: 4px; }
+.gv-v-serial { font-size: 0.75rem; opacity: 0.9; }
+.gv-v-expiry { font-size: 0.85rem; font-weight: 600; }
+
+.gv-theme-basic { background: linear-gradient(135deg, #1e3c72, #2a5298); }
+
+.gv-theme-birthday { background: linear-gradient(135deg, #ff9a9e, #fecfef); }
+.gv-theme-birthday .gv-overlay { color: #333; text-shadow: none; }
+.gv-theme-birthday .gv-v-amount { top: 24px; left: 24px; right: auto; color: #e11d48; }
+.gv-theme-birthday .gv-v-code { top: 80px; left: 24px; right: auto; }
+.gv-theme-birthday .gv-v-footer { right: 24px; left: auto; text-align: right; }
+
+.gv-theme-wedding { background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728); }
+.gv-theme-wedding .gv-overlay { color: #4a3b1a; text-shadow: none; }
+.gv-theme-wedding .gv-v-amount { top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2.5rem; }
+.gv-theme-wedding .gv-v-code { top: 130px; left: 50%; transform: translateX(-50%); }
+.gv-theme-wedding .gv-v-footer { bottom: 10px; width: 100%; left: 0; align-items: center; }
+
+@keyframes gvFadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes gvSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
