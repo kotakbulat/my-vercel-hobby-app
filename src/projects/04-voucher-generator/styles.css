@@ -65,7 +65,7 @@
 .gv-code-display { font-family: monospace; font-size: 1.1rem; font-weight: bold; }
 
 .gv-theme-selector { display: flex; gap: 8px; }
-.gv-theme-btn { padding: 8px 16px; border: 1px solid #E5E7EB; border-radius: 20px; background: white; cursor: pointer; }
+.gv-theme-btn { padding: 8px 16px; color:black; border: 1px solid #E5E7EB; border-radius: 20px; background: white; cursor: pointer; }
 .gv-theme-btn.gv-active { background: #111827; color: white; border-color: #111827; }
 
 /* Export Card Details */

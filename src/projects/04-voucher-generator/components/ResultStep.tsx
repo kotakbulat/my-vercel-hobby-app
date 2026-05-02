@@ -64,7 +64,7 @@ export const ResultStep: React.FC<Props> = ({ data, onReset }) => {
       </div>
 
       <div className="gv-export-section gv-mt-3">
-        <h3>Export Gift Card</h3>
+        <h3>Gift Card</h3>
         <div className="gv-theme-selector">
           {(['basic', 'birthday', 'wedding'] as Theme[]).map((t) => (
             <button key={t} className={`gv-theme-btn ${theme === t ? 'gv-active' : ''}`} onClick={() => setTheme(t)}>
