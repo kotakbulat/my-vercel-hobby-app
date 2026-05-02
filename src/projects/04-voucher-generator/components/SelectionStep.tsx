@@ -7,7 +7,7 @@ interface Props {
   isLocked: boolean;
 }
 
-const PREDEFINED_AMOUNTS = [50000, 100000, 250000, 500000];
+const PREDEFINED_AMOUNTS = [250001, 500001, 1000001, 2000001];
 
 export const SelectionStep: React.FC<Props> = ({ amount, setAmount, isLocked }) => {
   const isCustom = amount > 0 && !PREDEFINED_AMOUNTS.includes(amount);

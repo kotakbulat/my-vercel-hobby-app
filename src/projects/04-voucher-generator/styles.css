@@ -31,7 +31,7 @@
 
 /* Selection Step */
 .gv-amount-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
-.gv-amount-btn { padding: 12px; border: 2px solid #E5E7EB; background: white; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+.gv-amount-btn { padding: 12px; color: black; border: 2px solid #E5E7EB; background: white; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.2s; }
 .gv-amount-btn:hover { border-color: #9CA3AF; }
 .gv-amount-btn.gv-active { border-color: #4F46E5; background: #EEF2FF; color: #4F46E5; }
 
