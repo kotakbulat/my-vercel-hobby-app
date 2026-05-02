@@ -1,3 +1,7 @@
+.voucher-generator {
+    background-color: white;
+}
+
 .gv-module-container {
   max-width: 600px;
   margin: 0 auto;
@@ -6,10 +10,11 @@
   background: #F9FAFB;
   padding: 20px;
   border-radius: 12px;
+  border: 5px solid #ff0000;
 }
 
 .gv-header { text-align: center; margin-bottom: 24px; }
-.gv-header h1 { margin: 0; font-size: 1.5rem; color: #111827; }
+.gv-header h1 { margin: 0; font-size: 1.5rem; color: #ff0000; }
 .gv-header p { margin: 4px 0 0; color: #6B7280; font-size: 0.9rem; }
 
 .gv-flow-container { display: flex; flex-direction: column; gap: 16px; }
@@ -38,7 +43,7 @@
 .gv-custom-amount label { font-size: 0.9rem; font-weight: 600; }
 .gv-input-wrapper { display: flex; align-items: center; margin-top: 8px; border: 1px solid #E5E7EB; border-radius: 8px; overflow: hidden; }
 .gv-currency-prefix { padding: 12px; background: #F3F4F6; color: #6B7280; font-weight: bold; border-right: 1px solid #E5E7EB; }
-.gv-custom-input { flex: 1; padding: 12px; border: none; outline: none; font-size: 1rem; width: 100%; box-sizing: border-box; }
+.gv-custom-input { flex: 1; padding: 12px; border: none; outline: none; font-size: 1rem; width: 100%; box-sizing: border-box; background-color: #efefef; color: black;}
 
 /* Payment Step */
 .gv-payment-methods { display: flex; flex-direction: column; gap: 8px; }
@@ -47,9 +52,9 @@
 /* Buttons & Utils */
 .gv-btn { padding: 12px 16px; border-radius: 8px; border: none; font-weight: 600; cursor: pointer; transition: 0.2s; display: inline-flex; justify-content: center; align-items: center; box-sizing: border-box; }
 .gv-btn:disabled { opacity: 0.6; cursor: not-allowed; }
-.gv-btn.gv-primary { background: #4F46E5; color: white; }
-.gv-btn.gv-primary:hover:not(:disabled) { background: #4338CA; }
-.gv-btn.gv-text-only { background: transparent; color: #4F46E5; }
+.gv-btn.gv-primary { background: #ff4a4a; color: white; }
+.gv-btn.gv-primary:hover:not(:disabled) { background: #ca3838; }
+.gv-btn.gv-text-only { background: transparent; color: #e54646; }
 .gv-btn.gv-small { padding: 6px 10px; font-size: 0.8rem; background: #E5E7EB; color: #111827; }
 .gv-full-width { width: 100%; }
 .gv-mt-3 { margin-top: 16px; }

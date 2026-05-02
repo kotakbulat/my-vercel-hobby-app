@@ -83,6 +83,10 @@ export const ResultStep: React.FC<Props> = ({ data, onReset }) => {
       </div>
 
       <button className="gv-btn gv-text-only gv-full-width gv-mt-3" onClick={onReset}>
+        Share
+      </button>
+
+      <button className="gv-btn gv-text-only gv-full-width gv-mt-3" onClick={onReset}>
         Buy Another Voucher
       </button>
     </div>
