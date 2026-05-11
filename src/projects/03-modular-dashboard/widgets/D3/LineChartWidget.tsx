@@ -2,9 +2,14 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import { DataRegistry } from '../../core/DataSources';
 
+type LineChartData = {
+  date: string;
+  value: number;
+};
+
 export const LineChartWidget: React.FC<{ dataSourceId?: string }> = ({ dataSourceId }) => {
   const svgRef = useRef<SVGSVGElement>(null);
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState<LineChartData[]>([]);
   const[loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -28,16 +33,16 @@ export const LineChartWidget: React.FC<{ dataSourceId?: string }> = ({ dataSourc
     const margin = { top: 20, right: 20, bottom: 30, left: 40 };
 
     const x = d3.scaleTime()
-      .domain(d3.extent(data, d => new Date(d.date)) as [Date, Date])
+      .domain(d3.extent(data, (d: LineChartData) => new Date(d.date)) as [Date, Date])
       .range([margin.left, width - margin.right]);
 
     const y = d3.scaleLinear()
-      .domain([0, d3.max(data, d => d.value) as number]).nice()
+      .domain([0, d3.max(data, (d: LineChartData) => d.value) as number]).nice()
       .range([height - margin.bottom, margin.top]);
 
     const line = d3.line<any>()
-      .x(d => x(new Date(d.date)))
-      .y(d => y(d.value))
+      .x((d: LineChartData) => x(new Date(d.date)))
+      .y((d: LineChartData) => y(d.value))
       .curve(d3.curveMonotoneX); // Smooth curves
 
     // Add Axes
@@ -59,9 +64,9 @@ export const LineChartWidget: React.FC<{ dataSourceId?: string }> = ({ dataSourc
     gradient.append("stop").attr("offset", "100%").attr("stop-color", "#3b82f6").attr("stop-opacity", 0);
 
     const area = d3.area<any>()
-      .x(d => x(new Date(d.date)))
+      .x((d: LineChartData) => x(new Date(d.date)))
       .y0(y(0))
-      .y1(d => y(d.value))
+      .y1((d: LineChartData) => y(d.value))
       .curve(d3.curveMonotoneX);
 
     svg.append("path")
