@@ -13,12 +13,17 @@ export type WidgetItem = {
 
 interface DashboardState {
   widgets: WidgetItem[];
+
   addWidget: (
     type: string,
     layout?: WidgetLayout, // ✅ make optional
     dataSourceId?: string
   ) => void;
+
   updateLayout: (id: string, layout: Partial<WidgetLayout>) => void;
+
+  updateWidgetConfig: (id: string, config: Record<string, any>) => void;
+  
   removeWidget: (id: string) => void;
 }
 
@@ -69,6 +74,21 @@ export const useDashboardStore = create<DashboardState>()(
           widgets: state.widgets.map((w) =>
             w.id === id
               ? { ...w, layout: { ...w.layout, ...newLayout } }
+              : w
+          ),
+        })),
+
+      updateWidgetConfig: (id, config) =>
+        set((state) => ({
+          widgets: state.widgets.map((w) =>
+            w.id === id
+              ? {
+                  ...w,
+                  config: {
+                    ...w.config,
+                    ...config,
+                  },
+                }
               : w
           ),
         })),
