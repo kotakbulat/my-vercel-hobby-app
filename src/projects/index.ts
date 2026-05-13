@@ -17,14 +17,14 @@ import Project04 from './04-voucher-generator/App';
 export const projectRegistry: Project[] = [
   {
     id: 'counter-app',
-    title: 'Counter Timer',
+    title: 'Simple Counter',
     path: '/projects/counter-app',
     component: Project01,
     description: 'A simple counter tool.'
   },
   {
     id: 'socmed-agg-app',
-    title: 'Unified Social Feed',
+    title: 'Mock Feeds',
     path: '/projects/socmed-agg-app',
     component: Project02,
     description: 'simulate a unified social media feed by combining content from multiple platforms into a single scrolling'
