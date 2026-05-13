@@ -12,6 +12,7 @@ import Project01 from './01-counter-app/main';
 import Project02 from './02-multiplatform-socmedagg/App';
 import Project03 from './03-modular-dashboard/index';
 import Project04 from './04-voucher-generator/App';
+import Project05 from './05-affiliation-flow/App';
 
 
 export const projectRegistry: Project[] = [
@@ -41,6 +42,13 @@ export const projectRegistry: Project[] = [
     title: 'Mock Voucher Generator',
     path: '/projects/voucher-generator',
     component: Project04,
-    description: 'A simple rnadomized mock voucher generator'
+    description: 'A simple randomized mock voucher generator'
+  },
+  {
+    id: 'affiliation-flow',
+    title: 'Mock Affiliation',
+    path: '/projects/affiliation-flow',
+    component: Project05,
+    description: 'A simple mock Affiliation Flow Page'
   },
 ];

@@ -1,5 +1,4 @@
 import React from 'react';
-import './styles/global.css';
 import './styles/animations.css';
 import './styles/components.css';
 
@@ -15,7 +14,7 @@ import { BusinessFlowDiagram } from './components/BusinessFlowDiagram';
 import { CTASection } from './components/CTASection';
 import { Footer } from './components/Footer';
 
-const App: React.FC = () => {
+const AffiliationFlow: React.FC = () => {
   return (
     <>
       <Navbar />
@@ -33,4 +32,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default AffiliationFlow;
