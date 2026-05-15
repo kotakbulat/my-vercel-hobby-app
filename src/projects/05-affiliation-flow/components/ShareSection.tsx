@@ -9,7 +9,7 @@ export const ShareSection: React.FC = () => {
     <section className="reveal" ref={ref}>
       <div className="container">
         <h2 className="section-title">3. Share the Code</h2>
-        <p className="section-subtitle">Distribute the code across your network.</p>
+        <p className="section-subtitle">Distribute the code across your network.(mock share button)</p>
         
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
           {socials.map((platform, i) => (

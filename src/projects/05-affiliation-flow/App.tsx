@@ -17,17 +17,18 @@ import { Footer } from './components/Footer';
 const AffiliationFlow: React.FC = () => {
   return (
     <>
-      <Navbar />
-      <HeroSection />
-      <RegisterSection />
-      <GenerateCodeSection />
-      <ShareSection />
-      <OrderFlowSection />
-      <TimelineSection />
-      <RewardDashboard />
-      <BusinessFlowDiagram />
-      <CTASection />
-      <Footer />
+      <div className='affiliate'> 
+        <HeroSection />
+        <RegisterSection />
+        <GenerateCodeSection />
+        <ShareSection />
+        <OrderFlowSection />
+        <TimelineSection />
+        <RewardDashboard />
+        <BusinessFlowDiagram />
+        <CTASection />
+        <Footer />
+      </div>
     </>
   );
 };

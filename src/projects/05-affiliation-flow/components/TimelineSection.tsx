@@ -4,7 +4,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 export const TimelineSection: React.FC = () => {
   const ref = useScrollReveal();
   const [step, setStep] = useState(0);
-  const steps = ["Order Created", "Verified", "Shipped", "Delivered", "Commission Released"];
+  const steps = ["Order Created", "Booking Paid", "Itinerary Issued", "Flight Departing", "Commission Released"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -20,8 +20,8 @@ export const TimelineSection: React.FC = () => {
         <p className="section-subtitle">Commission is secured only after a successful COD delivery.</p>
         
         <div className="glass-card" style={{ position: 'relative', padding: '3rem 2rem' }}>
-          <div style={{ position: 'absolute', top: '50%', left: '10%', right: '10%', height: '4px', background: 'var(--card-border)', zIndex: 0 }}>
-            <div style={{ width: `${(step / 4) * 100}%`, height: '100%', background: 'var(--primary)', transition: 'width 0.5s ease' }}></div>
+          <div style={{ position: 'absolute', top: '34%', left: '10%', right: '10%', height: '4px', background: 'white', zIndex: 0 }}>
+            <div style={{ width: `${(step / 4) * 100}%`, height: '100%', background: 'red', transition: 'width 0.5s ease' }}></div>
           </div>
           
           <div style={{ display: 'flex', justifyContent: 'space-between', position: 'relative', zIndex: 1 }}>
@@ -29,12 +29,12 @@ export const TimelineSection: React.FC = () => {
               <div key={i} style={{ textAlign: 'center', width: '120px' }}>
                 <div style={{ 
                   width: '30px', height: '30px', borderRadius: '50%', margin: '0 auto 10px', 
-                  background: i <= step ? 'var(--primary)' : 'var(--bg-color)', 
-                  border: `2px solid ${i <= step ? 'var(--primary)' : 'var(--text-muted)'}`,
+                  background: i <= step ? 'red' : 'grey', 
+                  border: `5px solid ${i <= step ? 'white' : 'white'}`,
                   transition: 'all 0.5s ease',
                   boxShadow: i <= step ? '0 0 10px var(--primary)' : 'none'
                 }}></div>
-                <span style={{ fontSize: '0.8rem', color: i <= step ? 'white' : 'var(--text-muted)' }}>{label}</span>
+                <span style={{ fontSize: '0.8rem', color: i <= step ? 'black' : 'grey' }}>{label}</span>
               </div>
             ))}
           </div>

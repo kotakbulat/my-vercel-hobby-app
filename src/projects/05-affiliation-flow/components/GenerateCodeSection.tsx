@@ -14,7 +14,7 @@ export const GenerateCodeSection: React.FC = () => {
     <section className="reveal" ref={ref}>
       <div className="container">
         <h2 className="section-title">2. Generate Affiliate Code</h2>
-        <p className="section-subtitle">Create a unique COD tracking code to share with your audience.</p>
+        <p className="section-subtitle">Create a unique COD tracking code to share with your audience.(mock data)</p>
         
         <div className="glass-card" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
           {!code ? (

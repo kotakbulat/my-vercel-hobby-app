@@ -15,7 +15,7 @@ export const OrderFlowSection: React.FC = () => {
       <div className="container grid-2">
         <div>
           <h2 className="section-title" style={{ textAlign: 'left' }}>4. Customer Orders</h2>
-          <p className="section-subtitle" style={{ textAlign: 'left' }}>A customer uses your code at checkout, choosing Cash-on-Delivery.</p>
+          <p className="section-subtitle" style={{ textAlign: 'left' }}>A customer uses your code at checkout (mock checkout)</p>
         </div>
 
         <div className="glass-card">
@@ -30,14 +30,14 @@ export const OrderFlowSection: React.FC = () => {
               <div style={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
                 <div style={{ width: '80px', height: '80px', background: 'var(--card-border)', borderRadius: '8px' }}></div>
                 <div>
-                  <h4>Premium Wireless Earbuds</h4>
+                  <h4>Airpaz Code : 103*****88</h4>
                   <p style={{ color: 'var(--primary)' }}>$49.99</p>
                 </div>
               </div>
               <input type="text" placeholder="Enter Affiliate Code (e.g. AFF-X7K29P)" required className="input-field" />
               <div style={{ background: 'rgba(255,255,255,0.05)', padding: '1rem', borderRadius: '8px', marginBottom: '1rem' }}>
                 <label style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer' }}>
-                  <input type="radio" checked readOnly /> Cash on Delivery (COD)
+                  <input type="radio" checked readOnly /> Debit/Credit Card
                 </label>
               </div>
               <button type="submit" className="btn-primary" style={{ width: '100%' }}>Place Order</button>

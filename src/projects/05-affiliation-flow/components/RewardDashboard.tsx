@@ -25,7 +25,7 @@ export const RewardDashboard: React.FC = () => {
     <section className="reveal" ref={ref}>
       <div className="container">
         <h2 className="section-title">6. Earnings Dashboard</h2>
-        <p className="section-subtitle">Real-time statistics of your affiliate business.</p>
+        <p className="section-subtitle">Real-time statistics of your affiliate business.(mock data)</p>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
           <div className="glass-card" style={{ textAlign: 'center' }}>

@@ -15,14 +15,14 @@ export const RegisterSection: React.FC = () => {
     <section id="register" className="reveal" ref={ref}>
       <div className="container">
         <h2 className="section-title">1. Join the Platform</h2>
-        <p className="section-subtitle">Simulate becoming an affiliator instantly.</p>
+        <p className="section-subtitle">Simulate becoming an affiliator instantly.(mock login)</p>
         
         <div className="glass-card" style={{ maxWidth: '500px', margin: '0 auto' }}>
           {status === 'success' ? (
             <div style={{ textAlign: 'center', animation: 'popIn 0.5s ease-out' }}>
               <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>🎉</div>
-              <h3 style={{ color: 'var(--success)', marginBottom: '0.5rem' }}>Account Activated!</h3>
-              <p style={{ color: 'var(--text-muted)' }}>You are now an official affiliator.</p>
+              <h3 style={{ color: 'green', marginBottom: '0.5rem' }}>Account Activated!</h3>
+              <p style={{ color: 'grey' }}>You are now an official affiliator.</p>
             </div>
           ) : (
             <form onSubmit={handleRegister}>
