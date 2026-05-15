@@ -1,8 +1,6 @@
 import React from 'react';
 import './styles/animations.css';
 import './styles/components.css';
-
-import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { RegisterSection } from './components/RegisterSection';
 import { GenerateCodeSection } from './components/GenerateCodeSection';

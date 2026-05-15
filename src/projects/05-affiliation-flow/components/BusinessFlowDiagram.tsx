@@ -3,7 +3,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export const BusinessFlowDiagram: React.FC = () => {
   const ref = useScrollReveal();
-  const flow = ["Affiliator", "Generate Code", "Share Code", "Customer Orders", "Order Success", "Commission Earned"];
+  const flow = ["Affiliator", "Generate Code", "Share Code", "Customer Orders (Itinerary issued)", "Order Success (Fligth Departed)", "Commission Earned"];
 
   return (
     <section className="reveal" ref={ref}>
